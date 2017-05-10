@@ -28,7 +28,7 @@ public class KorkoaKorolleStarter {
 					
 					frame.setVisible(true);
 				} catch (Exception e) {
-					e.printStackTrace();
+					System.out.println("Enter a valid number");
 				}
 			}
 		});

@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 
@@ -76,12 +77,21 @@ public class GUI extends JFrame {
 		this.btnNewButton.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
+				
+				double result = 0;
+				try{
 				double principalAmount = Double.parseDouble(textField.getText());
 				double annualRate = Double.parseDouble(textField_1.getText());
 				double years = Double.parseDouble(textField_2.getText());
 				
-				double result = KorkoaKorolle.laskeTulos(principalAmount, annualRate, years);
+				result = KorkoaKorolle.laskeTulos(principalAmount, annualRate, years);
 				System.out.println(result);
+				}
+				
+				catch (Exception j) {
+					JOptionPane.showMessageDialog(contentPane, "Insert only numbers, please");
+					
+				}
 				
 				textField_3.setText(Double.toString(result));
 				
