@@ -38,7 +38,7 @@ public class GUI extends JFrame {
 		lblEnterPrincipalAmount.setBounds(12, 12, 181, 15);
 		contentPane.add(lblEnterPrincipalAmount);
 		
-		JLabel lblEnterAnnualRate = new JLabel("Enter Annual Rate:");
+		JLabel lblEnterAnnualRate = new JLabel("Enter Interest Rate (%):");
 		lblEnterAnnualRate.setBounds(12, 39, 129, 15);
 		contentPane.add(lblEnterAnnualRate);
 		
